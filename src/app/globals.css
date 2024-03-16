@@ -1,33 +1,100 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+  --bg-color: rgb(242,242,242);
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.like-wrapper{
+  /* position: relative; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.like-container{
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  width:fit-content ;
+}
+
+.like-container:hover{
+  background-color: var(--bg-color);
+}
+
+.reactions{
+  position: absolute;
+  top: 44%;
+  background-color: white;
+  border: 1px solid rgb(0,0,0, 0.1);
+  border-radius: 10px;
+
+}
+
+.reactions{
+  box-shadow: 0px 4px 5px 0px #8E9596;
+  transition: transform ease 0.5s;
+}
+
+.reactions:hover img {
+  transform: scale(0.9);
+  transition: all ease;
+  transition-duration: 0.5s
+}
+
+.reactions img{
+  margin: 1px 5px;
+  width: 35px;
+  height: 35px;
+}
+
+.reactions img:hover{
+  transform: scale(1.5) translateY(-5px);
+  transition: all ease;
+  transition-duration: 0.5s
+}
+
+.icons:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.icons:nth-child(3) {
+  animation-delay: 0.2s;
+  margin-top: 0px;
+}
+.icons:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.icons:nth-child(5) {
+  animation-delay: 0.4s;
+  margin-top: 0px;
+}
+
+.icons {
+  animation: 0.5s ease 0s 1 eugkhY;
+}
+
+@keyframes eugkhY{
+  0% {
+      transform: translateY(0px) scaleX(0.8);
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  20% {
+      transform: translateY(-5px) scaleY(1.1);
+  }
+  40% {
+      transform: translateY(0px) scale(1);
+  }
+  60% {
+      transform: translateY(-1px) scaleX(0.9) scaleY(1.1);
+  }
+  100% {
+      transform: translateY(0px) scaleX(1) scaleX(1);
   }
 }

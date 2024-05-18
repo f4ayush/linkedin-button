@@ -51,7 +51,7 @@ function Like() {
     return (
         <div className='like-wrapper' onMouseEnter={() => setisLikeContainerHovered(true)} onMouseLeave={() => setisLikeContainerHovered(false)}
         >
-            
+           <p>this is ayush</p> 
            {isLikeContainerHovered &&
                 <div className="reactions">
                     {

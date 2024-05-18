@@ -56,7 +56,7 @@ function Like() {
       onMouseEnter={() => setisLikeContainerHovered(true)}
       onMouseLeave={() => setisLikeContainerHovered(false)}
     >
-      <h3>This comment is done by Avinash</h3>
+      <h3>This comment is done by Avinash Kumar</h3>
 
       {isLikeContainerHovered && (
         <div className='reactions'>
